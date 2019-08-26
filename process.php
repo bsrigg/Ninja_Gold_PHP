@@ -11,7 +11,15 @@
         $result = "lost";
         $surprise = "BOOOOOO...";
     }
-    $_SESSION['gold'] = $newgold + $_POST['gold'];
-    $_SESSION['returntext']="You entered a ".$_POST['building']." and ".$result." ".$newgold." gold pieces! ".$surprise;
+    if ($_SESSION['gold']<0)
+    {
+        $_SESSION['returntext']="You are DEAD!!!!!!!";
+    }
+    else
+    {
+        $_SESSION['gold'] = $newgold + $_POST['gold'];
+        $_SESSION['returntext']="You entered the ".$_POST['building']." and ".$result." ".$newgold." gold pieces! ".$surprise;
+    }
+    array_push($_SESSION[history],$_SESSION['returntext']);
     header('Location: index.php');
 ?>

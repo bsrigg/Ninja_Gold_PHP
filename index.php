@@ -1,6 +1,16 @@
 <?php
     session_start();
     $gold = $_SESSION['gold']+0;
+    if(!isset($_SESSION['history']))
+    {
+        $_SESSION['history']=array();
+    }
+    function Read() {
+        $reverse=array_reverse($_SESSION['history']);
+        foreach($reverse as $data) {
+            echo "&#09;$data &#13;";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +43,9 @@
                 echo "<form action='process.php' method='POST'><input type='hidden' name='building' value=".$dept[$i]['name']." /><input type='hidden' name='gold' value=".$gold." /><input type='hidden' name='low' value=".$dept[$i]['low']." /><input type='hidden' name='high' value=".$dept[$i]['high']." /><input type='submit' name='submitnow' value='Find Gold!'' /></form>";
                 echo "</div>";
             }
+            
         ?>
         <br/><br/>
-        <textarea rows="25" cols="227"><?php echo $_SESSION['returntext'] ?>&#13</textarea>
+        <textarea rows="25" cols="70"><?php Read(); ?></textarea>
 </body>
 </html
