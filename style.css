@@ -9,15 +9,25 @@
     border: 3px solid black; 
     text-align: center;
     border-radius: 15px;
-    margin-left: 20px;
+    margin-left: .5%;
+}
+.header h1 form{
+    display: inline-block;
+    vertical-align: top;
+}
+.header input[type="submit"] {
+    font-weight: bold;
+    border-radius: 15px; 
+    
+    height: 20px; 
+    width: 50px; 
+    color: #7a00ff; 
+    background-color: gold;
+    box-shadow: 2px 6px #8b5bbe;
 }
 h1 {
     font-size: 24px; 
     text-align: center;
-}
-textarea {
-    border: 3px solid black;
-    border-radius: 15px;
 }
 .goldcount {
     border: 3px solid black; 
@@ -25,7 +35,7 @@ textarea {
     text-align: right;
     border-radius: 15px;
 }
-input[type="submit"] {
+.dept input[type="submit"] {
     font-weight: bold;
     border-radius: 15px; 
     margin-bottom: 50px; 
@@ -35,6 +45,8 @@ input[type="submit"] {
     background-color: gold;
     box-shadow: 2px 6px #8b5bbe;
 }
-textares {
-    margin: auto;
+.main textarea {
+    margin-left:30%;
+    border: 3px solid black;
+    border-radius: 15px;
 }
