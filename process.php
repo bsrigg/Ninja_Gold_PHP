@@ -21,7 +21,7 @@
     }   
     if ($_SESSION['gold']+$newgold<0 and $_SESSION['status']!='DEAD')
     {
-        $_SESSION['returntext']="You just Died!!!!!!! You lost another ".$newgold." gold pieces. ".date("m-d-Y h:i:sa");
+        $_SESSION['returntext']="You just Died!!!!!!! You lost ".$newgold." gold pieces. ".date("m-d-Y h:i:sa");
         $_SESSION['status']='DEAD';
         $_SESSION['gold'] = $newgold + $_POST['gold'];
     }
