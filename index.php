@@ -12,7 +12,7 @@
     function Read() {
         $reverse=array_reverse($_SESSION['history']);
         foreach($reverse as $data) {
-            echo "&#09;$data &#13;";
+            echo "$data";
         }
     }
 ?>
@@ -59,7 +59,13 @@
             
         ?>
         <br/><br/>
-        <textarea rows="35" cols="90"><?php Read(); ?></textarea>
+        <div class="output"><?php Read(); ?></div>
+        <?php 
+            if ($_SESSION['status']=='DEAD')
+            {
+                echo "<img src='bloody-handprint.png' />";
+            }
+        ?>
     </div>
 </body>
 </html
