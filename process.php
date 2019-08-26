@@ -10,7 +10,7 @@
         die();
     }
     if($_POST['building'] == 'Casino'){
-        $low = -($_POST['high']);
+        $low = -($_POST['high']+120);
     }
     if ($_SESSION['status']=='ALIVE')
     {
