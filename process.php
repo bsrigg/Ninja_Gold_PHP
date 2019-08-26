@@ -32,7 +32,7 @@
     }
     else
     {
-        $_SESSION['returntext']="You're are dead Dude!!!!!!!  You can't play anymore...";
+        $_SESSION['returntext']="You're dead Dude!!!!!!!  You can't play anymore...";
     }
     array_push($_SESSION[history],$_SESSION['returntext']);
     header('Location: index.php');
